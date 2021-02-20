@@ -12,7 +12,7 @@ addition(7, 3) ➞ 10
 */
 
 function addition(a, b) {
-	return a + b;
+  return a + b;
 }
 
 /* CODING CHALLANGE 2
@@ -31,7 +31,7 @@ getFirstValue([-500, 0, 50]) ➞ -500
 */
 
 function getFirstValue(arr) {
-	return arr[0];
+  return arr[0];
 }
 
 /* CODING CHALLANGE 3
@@ -50,11 +50,11 @@ isSeven(7) ➞ true
 */
 
 function isSeven(x) {
-	if (x === 7) {
-		return true;
-	} else {
-		return false;
-	}
+  if (x === 7) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* CODING CHALLANGE 4
@@ -73,7 +73,7 @@ howManySeconds(24) ➞ 86400
 */
 
 function howManySeconds(hours) {
-	return (hours = hours * 3600);
+  return (hours = hours * 3600);
 }
 
 /*
@@ -97,7 +97,7 @@ Expect only positive integer inputs.
 */
 
 function calcAge(age) {
-	return (age = age * 365);
+  return (age = age * 365);
 }
 
 /*
@@ -117,5 +117,72 @@ findPerimeter(2, 9) ➞ 22
 */
 
 function findPerimeter(length, width) {
-	return (x = 2 * (length + width));
+  return (x = 2 * (length + width));
+}
+
+/* 
+CODING CHALLANGE 8
+Convert Minutes into Seconds
+
+Write a function that takes an integer minutes and converts it to seconds.
+
+Examples
+convert(5) ➞ 300
+
+convert(3) ➞ 180
+
+convert(2) ➞ 120
+
+
+*/
+
+function convert(minutes) {
+  return (minutes = minutes * 60);
+}
+
+/* 
+CODING CHALLANGE 8
+
+Buggy Code (Part 1)
+Fix the code in the code tab to pass this challenge (only syntax errors). Look at the examples below to get an idea of what the function should do.
+
+Examples
+cubes(3) ➞ 27
+
+cubes(5) ➞ 125
+
+cubes(10) ➞ 1000
+*/
+function cubes(a) {
+  return (a = a ** 3);
+}
+
+/* 
+CODING CHALLANGE 9
+
+Convert a Number to Base-2
+
+Create a function that returns a base-2 (binary) representation of a base-10 (decimal) string number. To convert is simple: ((2) means base-2 and (10) means base-10) 010101001(2) = 1 + 8 + 32 + 128.
+
+Going from right to left, the value of the most right bit is 1, now from that every bit to the left will be x2 the value, value of an 8 bit binary numbers are (256, 128, 64, 32, 16, 8, 4, 2, 1).
+
+Examples
+binary(1) ➞ "1"
+// 1*1 = 1
+
+binary(5) ➞ "101"
+// 1*1 + 1*4 = 5
+
+binary(10) ➞ "1010"
+// 1*2 + 1*8 = 10
+Notes
+Numbers will always be below 1024 (not including 1024).
+The && operator could be useful.
+The strings will always go to the length at which the most left bit's value gets bigger than the number in decimal.
+If a binary conversion for 0 is attempted, return "0".
+
+*/
+
+function binary(decimal) {
+  return decimal.toString(2);
 }
