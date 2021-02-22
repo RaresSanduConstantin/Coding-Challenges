@@ -12,7 +12,7 @@ addition(7, 3) ➞ 10
 */
 
 function addition(a, b) {
-  return a + b;
+	return a + b;
 }
 
 /* CODING CHALLANGE 2
@@ -31,7 +31,7 @@ getFirstValue([-500, 0, 50]) ➞ -500
 */
 
 function getFirstValue(arr) {
-  return arr[0];
+	return arr[0];
 }
 
 /* CODING CHALLANGE 3
@@ -50,11 +50,11 @@ isSeven(7) ➞ true
 */
 
 function isSeven(x) {
-  if (x === 7) {
-    return true;
-  } else {
-    return false;
-  }
+	if (x === 7) {
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /* CODING CHALLANGE 4
@@ -73,7 +73,7 @@ howManySeconds(24) ➞ 86400
 */
 
 function howManySeconds(hours) {
-  return (hours = hours * 3600);
+	return (hours = hours * 3600);
 }
 
 /*
@@ -97,7 +97,7 @@ Expect only positive integer inputs.
 */
 
 function calcAge(age) {
-  return (age = age * 365);
+	return (age = age * 365);
 }
 
 /*
@@ -117,10 +117,10 @@ findPerimeter(2, 9) ➞ 22
 */
 
 function findPerimeter(length, width) {
-  return (x = 2 * (length + width));
+	return (x = 2 * (length + width));
 }
 
-/* 
+/*
 CODING CHALLANGE 8
 Convert Minutes into Seconds
 
@@ -137,10 +137,10 @@ convert(2) ➞ 120
 */
 
 function convert(minutes) {
-  return (minutes = minutes * 60);
+	return (minutes = minutes * 60);
 }
 
-/* 
+/*
 CODING CHALLANGE 8
 
 Buggy Code (Part 1)
@@ -154,10 +154,10 @@ cubes(5) ➞ 125
 cubes(10) ➞ 1000
 */
 function cubes(a) {
-  return (a = a ** 3);
+	return (a = a ** 3);
 }
 
-/* 
+/*
 CODING CHALLANGE 9
 
 Convert a Number to Base-2
@@ -184,5 +184,65 @@ If a binary conversion for 0 is attempted, return "0".
 */
 
 function binary(decimal) {
-  return decimal.toString(2);
+	return decimal.toString(2);
+}
+
+/*
+CODING CHALLANGE 10
+
+Return the Next Number from the Integer Passed
+Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+Examples
+addition(0) ➞ 1
+
+addition(9) ➞ 10
+
+addition(-3) ➞ -2
+
+*/
+
+function addition(num) {
+	return (num += 1);
+}
+
+/*
+CODING CHALLANGE 11
+
+Area of a Triangle
+Write a function that takes the base and height of a triangle and return its area.
+
+Examples
+triArea(3, 2) ➞ 3
+
+triArea(7, 4) ➞ 14
+
+triArea(10, 10) ➞ 50
+
+*/
+
+function triArea(base, height) {
+	return base * height / 2;
+}
+
+/*
+CODING CHALLANGE 11
+
+Find the Smallest and Biggest Numbers
+Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
+Examples
+minMax([1, 2, 3, 4, 5]) ➞ [1, 5]
+
+minMax([2334454, 5]) ➞ [5, 2334454]
+
+minMax([1]) ➞ [1, 1]
+*/
+
+function minMax(arr) {
+	let a = [];
+
+	a.push(Math.min(...arr));
+	a.push(Math.max(...arr));
+	return a;
 }
