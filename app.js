@@ -314,3 +314,72 @@ matchHouses(87) ➞ 436
 function matchHouses(steps) {
 	return steps * 5 + 1;
 }
+
+/*
+CODING CHALLANGE 15
+
+Task:
+Given a list of integers, determine whether the sum of its elements is odd or even.
+
+Give your answer as a string matching "odd" or "even".
+
+If the input array is empty consider it as: [0] (array with a zero).
+
+Examples:
+Input: [0]
+Output: "even"
+
+Input: [0, 1, 4]
+Output: "odd"
+
+Input: [0, -1, -5]
+Output: "even"
+*/
+
+function oddOrEven(array) {
+	//enter code here
+	if (array.length === 0) {
+		return 'even';
+	}
+	let i = array.reduce((acc, cur) => acc + cur);
+
+	if (i % 2 === 0) {
+		return 'even';
+	} else {
+		return 'odd';
+	}
+}
+
+/*
+ CODING CHALLANGE 16
+
+ Sum of positive
+ You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0.
+
+
+
+ */
+
+function positiveSum(arr) {
+	if (arr.length === 0) {
+		return 0;
+	}
+
+	let sum = [];
+
+	arr.forEach((num) => {
+		if (num > 0) {
+			sum.push(num);
+		}
+	});
+
+	if (sum.length === 0) {
+		return 0;
+	} else {
+		return sum.reduce((acc, cur) => acc + cur);
+	}
+}
