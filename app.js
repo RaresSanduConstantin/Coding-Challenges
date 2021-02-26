@@ -407,93 +407,6 @@ function even_or_odd(number) {
 
   Total pressure calculation
 
-  Given the molecular mass of two molecules M1M_1M
-1
-​
-  and M2M_2M
-2
-​
- , their masses present m1m_1m
-1
-​
-  and m2m_2m
-2
-​
-  in a vessel of volume VVV at a specific temperature TTT, find the total pressure PtotalP_{total}P
-total
-​
-  exerted by the molecules. Formula to calculate the pressure is:
-
-Ptotal=(m1M1+m2M2)RTV\LARGE P_{total} = {{({{m_1} \over {M_1}} + {{m_2} \over {M_2}}) R T} \over V}P
-total
-​
- =
-V
-(
-M
-1
-​
-
-m
-1
-​
-
-​
- +
-M
-2
-​
-
-m
-2
-​
-
-​
- )RT
-​
-
-Input
-Six values : m1m_1m
-1
-​
- , m2m_2m
-2
-​
- , M1M_1M
-1
-​
- , M2M_2M
-2
-​
- , VVV, TTT
-
-Units are:
-
-For m1m_1m
-1
-​
-  and m2m_2m
-2
-​
- : grams (ggg)
-For M1M_1M
-1
-​
- , M2M_2M
-2
-​
- :  g⋅mol−1\ g \cdot mol^{-1} g⋅mol
-−1
-
-For VVV:  dm3\ dm^3 dm
-3
-
-For TTT:  °C\ \degree C °C
-Output
-One value: PtotalP_{total}P
-total
-​
- , in units of atmatmatm.
 
 Notes
 Remember: Temperature is given in Celsius while SI unit is Kelvin (KKK).  0°C=273.15K\ 0\degree C = 273.15K 0°C=273.15K
@@ -515,3 +428,50 @@ The gas constant  R=0.082dm3⋅atm⋅K−1⋅mol−1\ R = 0.082dm^3 \cdot atm \c
 
   return (((M1 + M2) * R * T) / V) * 1000;
 }
+
+
+/*
+ CODING CHALLANGE 19
+
+ Opposite number
+
+ Very simple, given a number, find its opposite.
+
+Examples:
+
+1: -1
+14: -14
+-34: 34
+
+*/
+
+function opposite(number) {
+	//your code here
+	return -number
+  }
+
+
+/*
+ CODING CHALLANGE 20
+Chuck Norris loves push ups. That's just a fact. It has been said that when Chuck Norris does a push up, he isn't pushing himself up, he's pushing the world down!
+
+Today, Chuck got home from work 10 minutes earlier than his wife. Naturally he decided to bang out some push ups. By the time she arrives home he can have smashed out at least 1000 and barely broken a sweat. He counts them in binary, because he thinks coding is cool, and because he is a massive Badass.
+
+When his wife arrives home, she starts talking to Chuck, spoiling his count! Your job is to write a function to isolate Chuck's count, and then work out how many push ups he has done! Return your answer as a number.
+
+Careful Chuck doesn't lose count! Even if he does, always return the highest number he counted to! If Chuck's wife has left a list of jobs for him he won't be able to do any push ups... if there is no sign of a count, simply return "CHUCK SMASH!!"
+
+In the event someone dares to provide Chuck with something other than a string, return 'FAIL!!'
+
+Your code should still pass in the case that the binary is mixed up with other characters - maybe Chuck has a cough... e.g.: '1ee1gf00t10h1011tr00' --> '110010101100' --> 3244.
+
+Feel the burn!!
+
+*/
+
+function chuckPushUps(s) {
+	if (!s || typeof(s)!='string') return 'FAIL!!';
+	if (!s.includes('0')&&!s.includes('1')) return 'CHUCK SMASH!!';
+	r = s.split('').filter(e=>(e=='0')||(e=='1')||(e==' ')).join('').split(' ').map(e=>parseInt(e, 2)).filter(e=>!isNaN(e));
+	return Math.max(...r);
+  }
