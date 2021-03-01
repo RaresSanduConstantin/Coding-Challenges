@@ -475,3 +475,45 @@ function chuckPushUps(s) {
 	r = s.split('').filter(e=>(e=='0')||(e=='1')||(e==' ')).join('').split(' ').map(e=>parseInt(e, 2)).filter(e=>!isNaN(e));
 	return Math.max(...r);
   }
+
+
+  /*
+  CODING CHALLANGE 21
+   Return Negative
+
+   In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+Example:
+
+makeNegative(1); // return -1
+makeNegative(-5); // return -5
+makeNegative(0); // return 0
+makeNegative(0.12); // return -0.12
+  */
+
+ function makeNegative(num) {
+	// Code?
+	if(num < 0) return num
+	return -num
+  }
+
+
+  /*
+  CODING CHALLANGE 22
+ Descending Order
+ Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+
+Examples:
+Input: 42145 Output: 54421
+
+Input: 145263 Output: 654321
+
+Input: 123456789 Output: 987654321
+  */
+
+ function descendingOrder(n){
+	//...
+   let str = n.toString().split('')
+	let a = str.sort((a,b) => {return b-a}).join('')
+	return parseInt(a)
+  }
