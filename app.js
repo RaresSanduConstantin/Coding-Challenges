@@ -517,3 +517,87 @@ Input: 123456789 Output: 987654321
 	let a = str.sort((a,b) => {return b-a}).join('')
 	return parseInt(a)
   }
+
+
+  /* CODING CHALLANGE 23
+  Vowel Count
+
+  Return the number (count) of vowels in the given string.
+
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+The input string will only consist of lower case letters and/or spaces.
+  */
+
+ function getCount(str) {
+	var vowelsCount = 0;
+
+	// enter your majic here
+	let a = str.split('')
+	for (let vowel of a){
+	  if(vowel === 'a' || vowel === 'e' || vowel === 'i' || vowel === 'o' || vowel === 'u'){
+		vowelsCount ++;
+	  }
+	}
+	return vowelsCount;
+  }
+
+
+  /* CODING CHALLANGE 24
+  Reversed Words
+  Complete the solution so that it reverses all of the words within the string passed in.
+
+Example:
+
+reverseWords("The greatest victory is that which requires no battle")
+// should return "battle no requires which that is victory greatest The"
+  */
+
+ function reverseWords(str){
+
+	return str.split(' ').reverse().join(' '); // reverse those words
+  }
+
+  /* CODING CHALLANGE 25
+
+  Beginner Series #3 Sum of Numbers
+  Given two integers a and b, which can be positive or negative, find the sum of all the integers between including them too and return it. If the two numbers are equal return a or b.
+
+Note: a and b are not ordered!
+
+Examples
+GetSum(1, 0) == 1   // 1 + 0 = 1
+GetSum(1, 2) == 3   // 1 + 2 = 3
+GetSum(0, 1) == 1   // 0 + 1 = 1
+GetSum(1, 1) == 1   // 1 Since both are same
+GetSum(-1, 0) == -1 // -1 + 0 = -1
+GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
+  */
+
+ function getSum( a,b ){
+	let arr = []
+
+	if(a<b){
+	 for(let start = a; start <=b; start++){
+	   arr.push(start)
+	 }
+  //     console.log('pos', arr)
+	}
+
+	if(a>b){
+	  for(let start = a; start >=b; start--){
+	   arr.push(start)
+	 }
+  //     console.log('neg', arr)
+	}
+	if(arr.length === 0){
+  return a
+	} else {
+
+	   let sum = arr.reduce((acc,cur)=> acc+cur)
+	  return sum
+	  console.log('res', arr)
+
+	}
+
+  }
