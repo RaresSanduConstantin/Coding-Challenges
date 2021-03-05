@@ -344,7 +344,7 @@ function oddOrEven(array) {
 	let i = array.reduce((acc, cur) => acc + cur);
 
 	if (i % 2 === 0) {
-		return 'even';https://carturesti.ro/carte/infopedia-enciclopedia-ilustrata-77172
+		return 'even';
 	} else {
 		return 'odd';
 	}
@@ -384,7 +384,6 @@ function positiveSum(arr) {
 	}
 }
 
-
 /*
  CODING CHALLANGE 17
 Even or Odd
@@ -394,15 +393,14 @@ Create a function (or write a script in Shell) that takes an integer as an argum
 
 function even_or_odd(number) {
 	// ...
-	if(number%2 === 0){
-	  return 'Even'
+	if (number % 2 === 0) {
+		return 'Even';
 	} else {
-	  return "Odd"
+		return 'Odd';
 	}
-  }
+}
 
-
-  /*
+/*
   CODING CHALLANGE 18
 
   Total pressure calculation
@@ -420,15 +418,14 @@ The gas constant  R=0.082dm3⋅atm⋅K−1⋅mol−1\ R = 0.082dm^3 \cdot atm \c
 
   */
 
- function solution(M1, M2, m1, m2, V, T) {
-    M1 = m1 * 0.001/M1;
-    M2 = m2 * 0.001/M2;
-    T = T + 273.15;
-  var R = 0.082;
+function solution(M1, M2, m1, m2, V, T) {
+	M1 = m1 * 0.001 / M1;
+	M2 = m2 * 0.001 / M2;
+	T = T + 273.15;
+	var R = 0.082;
 
-  return (((M1 + M2) * R * T) / V) * 1000;
+	return (M1 + M2) * R * T / V * 1000;
 }
-
 
 /*
  CODING CHALLANGE 19
@@ -447,9 +444,8 @@ Examples:
 
 function opposite(number) {
 	//your code here
-	return -number
-  }
-
+	return -number;
+}
 
 /*
  CODING CHALLANGE 20
@@ -470,14 +466,19 @@ Feel the burn!!
 */
 
 function chuckPushUps(s) {
-	if (!s || typeof(s)!='string') return 'FAIL!!';
-	if (!s.includes('0')&&!s.includes('1')) return 'CHUCK SMASH!!';
-	r = s.split('').filter(e=>(e=='0')||(e=='1')||(e==' ')).join('').split(' ').map(e=>parseInt(e, 2)).filter(e=>!isNaN(e));
+	if (!s || typeof s != 'string') return 'FAIL!!';
+	if (!s.includes('0') && !s.includes('1')) return 'CHUCK SMASH!!';
+	r = s
+		.split('')
+		.filter((e) => e == '0' || e == '1' || e == ' ')
+		.join('')
+		.split(' ')
+		.map((e) => parseInt(e, 2))
+		.filter((e) => !isNaN(e));
 	return Math.max(...r);
-  }
+}
 
-
-  /*
+/*
   CODING CHALLANGE 21
    Return Negative
 
@@ -491,14 +492,13 @@ makeNegative(0); // return 0
 makeNegative(0.12); // return -0.12
   */
 
- function makeNegative(num) {
+function makeNegative(num) {
 	// Code?
-	if(num < 0) return num
-	return -num
-  }
+	if (num < 0) return num;
+	return -num;
+}
 
-
-  /*
+/*
   CODING CHALLANGE 22
  Descending Order
  Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
@@ -511,15 +511,18 @@ Input: 145263 Output: 654321
 Input: 123456789 Output: 987654321
   */
 
- function descendingOrder(n){
+function descendingOrder(n) {
 	//...
-   let str = n.toString().split('')
-	let a = str.sort((a,b) => {return b-a}).join('')
-	return parseInt(a)
-  }
+	let str = n.toString().split('');
+	let a = str
+		.sort((a, b) => {
+			return b - a;
+		})
+		.join('');
+	return parseInt(a);
+}
 
-
-  /* CODING CHALLANGE 23
+/* CODING CHALLANGE 23
   Vowel Count
 
   Return the number (count) of vowels in the given string.
@@ -529,21 +532,20 @@ We will consider a, e, i, o, u as vowels for this Kata (but not y).
 The input string will only consist of lower case letters and/or spaces.
   */
 
- function getCount(str) {
+function getCount(str) {
 	var vowelsCount = 0;
 
 	// enter your majic here
-	let a = str.split('')
-	for (let vowel of a){
-	  if(vowel === 'a' || vowel === 'e' || vowel === 'i' || vowel === 'o' || vowel === 'u'){
-		vowelsCount ++;
-	  }
+	let a = str.split('');
+	for (let vowel of a) {
+		if (vowel === 'a' || vowel === 'e' || vowel === 'i' || vowel === 'o' || vowel === 'u') {
+			vowelsCount++;
+		}
 	}
 	return vowelsCount;
-  }
+}
 
-
-  /* CODING CHALLANGE 24
+/* CODING CHALLANGE 24
   Reversed Words
   Complete the solution so that it reverses all of the words within the string passed in.
 
@@ -553,12 +555,11 @@ reverseWords("The greatest victory is that which requires no battle")
 // should return "battle no requires which that is victory greatest The"
   */
 
- function reverseWords(str){
-
+function reverseWords(str) {
 	return str.split(' ').reverse().join(' '); // reverse those words
-  }
+}
 
-  /* CODING CHALLANGE 25
+/* CODING CHALLANGE 25
 
   Beginner Series #3 Sum of Numbers
   Given two integers a and b, which can be positive or negative, find the sum of all the integers between including them too and return it. If the two numbers are equal return a or b.
@@ -574,36 +575,31 @@ GetSum(-1, 0) == -1 // -1 + 0 = -1
 GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
   */
 
- function getSum( a,b ){
-	let arr = []
+function getSum(a, b) {
+	let arr = [];
 
-	if(a<b){
-	 for(let start = a; start <=b; start++){
-	   arr.push(start)
-	 }
-  //     console.log('pos', arr)
+	if (a < b) {
+		for (let start = a; start <= b; start++) {
+			arr.push(start);
+		}
+		//     console.log('pos', arr)
 	}
 
-	if(a>b){
-	  for(let start = a; start >=b; start--){
-	   arr.push(start)
-	 }
-  //     console.log('neg', arr)
+	if (a > b) {
+		for (let start = a; start >= b; start--) {
+			arr.push(start);
+		}
+		//     console.log('neg', arr)
 	}
-	if(arr.length === 0){
-  return a
+	if (arr.length === 0) {
+		return a;
 	} else {
-
-	   let sum = arr.reduce((acc,cur)=> acc+cur)
-	  return sum
-	  console.log('res', arr)
-
+		let sum = arr.reduce((acc, cur) => acc + cur);
+		return sum;
 	}
+}
 
-  }
-
-
-  /*
+/*
 
  CODING CHALLANGE 26
  Disemvowel Trolls
@@ -618,26 +614,26 @@ For example, the string "This website is for losers LOL!" would become "Ths wbst
 Note: for this kata y isn't considered a vowel.
  */
 
-
 function disemvowel(str) {
-	let res = []
-	let a = str.split("")
-	a.forEach(char => {
-
-	  if (char.toLowerCase() === 'a' ||
-		  char.toLowerCase() === 'e' ||
-		  char.toLowerCase() === 'i' ||
-		  char.toLowerCase() ==='o' ||
-		  char.toLowerCase() === "u"){
-		return
-	   }else {
-		 res.push(char)
-	   }
-	})
+	let res = [];
+	let a = str.split('');
+	a.forEach((char) => {
+		if (
+			char.toLowerCase() === 'a' ||
+			char.toLowerCase() === 'e' ||
+			char.toLowerCase() === 'i' ||
+			char.toLowerCase() === 'o' ||
+			char.toLowerCase() === 'u'
+		) {
+			return;
+		} else {
+			res.push(char);
+		}
+	});
 	return res.join('');
-  }
+}
 
-  /*
+/*
    CODING CHALLANGE 27
 Get the Middle Character
 
@@ -656,19 +652,17 @@ Kata.getMiddle("A") should return "A"
 The middle character(s) of the word represented as a string.
   */
 
- function getMiddle(s) {
+function getMiddle(s) {
 	let l = s.length;
-	console.log(l/2, l/2 + 1)
-	if(l % 2 === 0) {
-
-	return s.slice(l/2-1, s.length/2+1)
+	console.log(l / 2, l / 2 + 1);
+	if (l % 2 === 0) {
+		return s.slice(l / 2 - 1, s.length / 2 + 1);
 	} else {
-	return s.slice(s.length/2, s.length/2+1)
-
+		return s.slice(s.length / 2, s.length / 2 + 1);
 	}
-   }
+}
 
-   /*
+/*
    CODING CHALLANGE 28
    Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
 
@@ -677,18 +671,18 @@ For example, if we run 9119 through the function, 811181 will come out, because 
 Note: The function accepts an integer and returns an integer
    */
 
-function squareDigits(num){
+function squareDigits(num) {
 	//may the code be with you
-	let a = [...num.toString()]
-	let arr = []
+	let a = [ ...num.toString() ];
+	let arr = [];
 	for (let n of a) {
-	  let transformNum = parseInt(n)
-	  let squer = transformNum * transformNum
-	   arr.push(squer)
+		let transformNum = parseInt(n);
+		let squer = transformNum * transformNum;
+		arr.push(squer);
 	}
 
-	return parseInt(arr.join(''))
-  }
+	return parseInt(arr.join(''));
+}
 /*
 CODING CHALLANGE 29
 If you can read this...
@@ -712,31 +706,51 @@ Every word and punctuation mark should be seperated by a space ' '.
 There should be no trailing whitespace
 */
 
-
-
-
-
 function to_nato(words) {
-	let transformUpperCaseAndArray = [...words.toUpperCase()]
-	let d =  {
-		  '': ' ', 'A': 'Alfa',  'B': 'Bravo',   'C': 'Charlie',
-		  'D': 'Delta',  'E': 'Echo',    'F': 'Foxtrot',
-		  'G': 'Golf',   'H': 'Hotel',   'I': 'India',
-		  'J': 'Juliett','K': 'Kilo',    'L': 'Lima',
-		  'M': 'Mike',   'N': 'November','O': 'Oscar',
-		  'P': 'Papa',   'Q': 'Quebec',  'R': 'Romeo',
-		  'S': 'Sierra', 'T': 'Tango',   'U': 'Uniform',
-		  'V': 'Victor', 'W': 'Whiskey', 'X': 'Xray',
-		  'Y': 'Yankee', 'Z': 'Zulu', '!': '!', '?':'?', '.': '.', '-': ''}
-	let a = transformUpperCaseAndArray.map(x => d[x]).join('/');
-	let arr = []
-	a.split('/').forEach(char => {if(char !=='') {
-	  arr.push(char)
-	} else {
-	  return
-	}})
+	let transformUpperCaseAndArray = [ ...words.toUpperCase() ];
+	let d = {
+		'': ' ',
+		A: 'Alfa',
+		B: 'Bravo',
+		C: 'Charlie',
+		D: 'Delta',
+		E: 'Echo',
+		F: 'Foxtrot',
+		G: 'Golf',
+		H: 'Hotel',
+		I: 'India',
+		J: 'Juliett',
+		K: 'Kilo',
+		L: 'Lima',
+		M: 'Mike',
+		N: 'November',
+		O: 'Oscar',
+		P: 'Papa',
+		Q: 'Quebec',
+		R: 'Romeo',
+		S: 'Sierra',
+		T: 'Tango',
+		U: 'Uniform',
+		V: 'Victor',
+		W: 'Whiskey',
+		X: 'Xray',
+		Y: 'Yankee',
+		Z: 'Zulu',
+		'!': '!',
+		'?': '?',
+		'.': '.',
+		'-': ''
+	};
+	let a = transformUpperCaseAndArray.map((x) => d[x]).join('/');
+	let arr = [];
+	a.split('/').forEach((char) => {
+		if (char !== '') {
+			arr.push(char);
+		} else {
+			return;
+		}
+	});
 
-  let final = arr.join(' ')
-  return final
-
-	}
+	let final = arr.join(' ');
+	return final;
+}
