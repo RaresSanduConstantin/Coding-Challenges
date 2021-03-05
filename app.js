@@ -667,3 +667,76 @@ The middle character(s) of the word represented as a string.
 
 	}
    }
+
+   /*
+   CODING CHALLANGE 28
+   Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+
+For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+Note: The function accepts an integer and returns an integer
+   */
+
+function squareDigits(num){
+	//may the code be with you
+	let a = [...num.toString()]
+	let arr = []
+	for (let n of a) {
+	  let transformNum = parseInt(n)
+	  let squer = transformNum * transformNum
+	   arr.push(squer)
+	}
+
+	return parseInt(arr.join(''))
+  }
+/*
+CODING CHALLANGE 29
+If you can read this...
+
+You'll have to translate a string to Pilot's alphabet (NATO phonetic alphabet).
+
+Input:
+
+If, you can read?
+
+Output:
+
+India Foxtrot , Yankee Oscar Uniform Charlie Alfa November Romeo Echo Alfa Delta ?
+
+Note:
+
+The set of used punctuation is .!?.
+Punctuation should be kept in your return string, but spaces should not.
+Xray should not have a dash within.
+Every word and punctuation mark should be seperated by a space ' '.
+There should be no trailing whitespace
+*/
+
+
+
+
+
+function to_nato(words) {
+	let transformUpperCaseAndArray = [...words.toUpperCase()]
+	let d =  {
+		  '': ' ', 'A': 'Alfa',  'B': 'Bravo',   'C': 'Charlie',
+		  'D': 'Delta',  'E': 'Echo',    'F': 'Foxtrot',
+		  'G': 'Golf',   'H': 'Hotel',   'I': 'India',
+		  'J': 'Juliett','K': 'Kilo',    'L': 'Lima',
+		  'M': 'Mike',   'N': 'November','O': 'Oscar',
+		  'P': 'Papa',   'Q': 'Quebec',  'R': 'Romeo',
+		  'S': 'Sierra', 'T': 'Tango',   'U': 'Uniform',
+		  'V': 'Victor', 'W': 'Whiskey', 'X': 'Xray',
+		  'Y': 'Yankee', 'Z': 'Zulu', '!': '!', '?':'?', '.': '.', '-': ''}
+	let a = transformUpperCaseAndArray.map(x => d[x]).join('/');
+	let arr = []
+	a.split('/').forEach(char => {if(char !=='') {
+	  arr.push(char)
+	} else {
+	  return
+	}})
+
+  let final = arr.join(' ')
+  return final
+
+	}
