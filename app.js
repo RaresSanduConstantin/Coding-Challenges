@@ -805,3 +805,30 @@ function sumCubes(n){
    }
     return sum.reduce((acc, cur) => acc+cur)
   }
+
+
+  /*
+  CODING CHALLANGE 31
+  Highest and Lowest
+  In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+Example:
+
+highAndLow("1 2 3 4 5");  // return "5 1"
+highAndLow("1 2 -3 4 5"); // return "5 -3"
+highAndLow("1 9 3 4 -5"); // return "9 -5"
+  */
+
+function highAndLow(numbers){
+    const arr = numbers.split(' ')
+    const a = []
+    for (let num of arr){
+    a.push(parseInt(num))
+
+    }
+
+    let min = Math.min(...a).toString()
+    let max = Math.max(...a).toString()
+
+    return max +" " + min
+  }
