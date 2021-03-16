@@ -832,3 +832,32 @@ function highAndLow(numbers){
 
     return max +" " + min
   }
+
+
+  /*
+   CODING CHALLANGE 32
+This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"
+  */
+
+   function accum(s) {
+	// your code
+  let str = s.split('')
+  let arr = []
+  str.forEach((letter, index) => {
+
+  let a = letter.repeat(index+1);
+    let b = a.charAt(0).toUpperCase() + a.slice(1).toLowerCase()
+
+  arr.push(b)
+
+  })
+
+
+return arr.join('-')
+}
