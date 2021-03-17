@@ -861,3 +861,23 @@ accum("cwAt") -> "C-Ww-Aaa-Tttt"
 
 return arr.join('-')
 }
+
+/*
+ CODING CHALLANGE 33
+ Shortest Word
+ Simple, given a string of words, return the length of the shortest word(s).
+
+String will never be empty and you do not need to account for different data types.
+
+
+*/
+
+function findShort(s){
+    let arrStr = s.split(' ')
+    let lengtharr = []
+    arrStr.forEach(word => {
+      let lengthWord = word.length;
+   lengtharr.push(lengthWord)
+                           })
+    return Math.min.apply(Math, lengtharr)
+  }
