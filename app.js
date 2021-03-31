@@ -12,7 +12,7 @@ addition(7, 3) ➞ 10
 */
 
 function addition(a, b) {
-	return a + b;
+  return a + b;
 }
 
 /* CODING CHALLANGE 2
@@ -31,7 +31,7 @@ getFirstValue([-500, 0, 50]) ➞ -500
 */
 
 function getFirstValue(arr) {
-	return arr[0];
+  return arr[0];
 }
 
 /* CODING CHALLANGE 3
@@ -50,11 +50,11 @@ isSeven(7) ➞ true
 */
 
 function isSeven(x) {
-	if (x === 7) {
-		return true;
-	} else {
-		return false;
-	}
+  if (x === 7) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* CODING CHALLANGE 4
@@ -73,7 +73,7 @@ howManySeconds(24) ➞ 86400
 */
 
 function howManySeconds(hours) {
-	return (hours = hours * 3600);
+  return (hours = hours * 3600);
 }
 
 /*
@@ -97,7 +97,7 @@ Expect only positive integer inputs.
 */
 
 function calcAge(age) {
-	return (age = age * 365);
+  return (age = age * 365);
 }
 
 /*
@@ -117,7 +117,7 @@ findPerimeter(2, 9) ➞ 22
 */
 
 function findPerimeter(length, width) {
-	return (x = 2 * (length + width));
+  return (x = 2 * (length + width));
 }
 
 /*
@@ -137,7 +137,7 @@ convert(2) ➞ 120
 */
 
 function convert(minutes) {
-	return (minutes = minutes * 60);
+  return (minutes = minutes * 60);
 }
 
 /*
@@ -154,7 +154,7 @@ cubes(5) ➞ 125
 cubes(10) ➞ 1000
 */
 function cubes(a) {
-	return (a = a ** 3);
+  return (a = a ** 3);
 }
 
 /*
@@ -184,7 +184,7 @@ If a binary conversion for 0 is attempted, return "0".
 */
 
 function binary(decimal) {
-	return decimal.toString(2);
+  return decimal.toString(2);
 }
 
 /*
@@ -203,7 +203,7 @@ addition(-3) ➞ -2
 */
 
 function addition(num) {
-	return (num += 1);
+  return (num += 1);
 }
 
 /*
@@ -222,7 +222,7 @@ triArea(10, 10) ➞ 50
 */
 
 function triArea(base, height) {
-	return base * height / 2;
+  return (base * height) / 2;
 }
 
 /*
@@ -240,11 +240,11 @@ minMax([1]) ➞ [1, 1]
 */
 
 function minMax(arr) {
-	let a = [];
+  let a = [];
 
-	a.push(Math.min(...arr));
-	a.push(Math.max(...arr));
-	return a;
+  a.push(Math.min(...arr));
+  a.push(Math.max(...arr));
+  return a;
 }
 
 /*
@@ -263,7 +263,7 @@ circuitPower(480, 20) ➞ 9600
 */
 
 function circuitPower(voltage, current) {
-	return voltage * current;
+  return voltage * current;
 }
 
 /*
@@ -286,9 +286,9 @@ Create a simple promise and pass the resolve function a string value of your cho
 */
 
 let promise = new Promise((resolve, reject) => {
-	setTimeout(() => {
-		resolve('edabit');
-	}, 1000);
+  setTimeout(() => {
+    resolve("edabit");
+  }, 1000);
 });
 
 /*
@@ -312,7 +312,7 @@ matchHouses(87) ➞ 436
 */
 
 function matchHouses(steps) {
-	return steps * 5 + 1;
+  return steps * 5 + 1;
 }
 
 /*
@@ -337,17 +337,17 @@ Output: "even"
 */
 
 function oddOrEven(array) {
-	//enter code here
-	if (array.length === 0) {
-		return 'even';
-	}
-	let i = array.reduce((acc, cur) => acc + cur);
+  //enter code here
+  if (array.length === 0) {
+    return "even";
+  }
+  let i = array.reduce((acc, cur) => acc + cur);
 
-	if (i % 2 === 0) {
-		return 'even';
-	} else {
-		return 'odd';
-	}
+  if (i % 2 === 0) {
+    return "even";
+  } else {
+    return "odd";
+  }
 }
 
 /*
@@ -365,23 +365,23 @@ Note: if there is nothing to sum, the sum is default to 0.
  */
 
 function positiveSum(arr) {
-	if (arr.length === 0) {
-		return 0;
-	}
+  if (arr.length === 0) {
+    return 0;
+  }
 
-	let sum = [];
+  let sum = [];
 
-	arr.forEach((num) => {
-		if (num > 0) {
-			sum.push(num);
-		}
-	});
+  arr.forEach((num) => {
+    if (num > 0) {
+      sum.push(num);
+    }
+  });
 
-	if (sum.length === 0) {
-		return 0;
-	} else {
-		return sum.reduce((acc, cur) => acc + cur);
-	}
+  if (sum.length === 0) {
+    return 0;
+  } else {
+    return sum.reduce((acc, cur) => acc + cur);
+  }
 }
 
 /*
@@ -392,12 +392,12 @@ Create a function (or write a script in Shell) that takes an integer as an argum
 */
 
 function even_or_odd(number) {
-	// ...
-	if (number % 2 === 0) {
-		return 'Even';
-	} else {
-		return 'Odd';
-	}
+  // ...
+  if (number % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
 }
 
 /*
@@ -419,12 +419,12 @@ The gas constant  R=0.082dm3⋅atm⋅K−1⋅mol−1\ R = 0.082dm^3 \cdot atm \c
   */
 
 function solution(M1, M2, m1, m2, V, T) {
-	M1 = m1 * 0.001 / M1;
-	M2 = m2 * 0.001 / M2;
-	T = T + 273.15;
-	var R = 0.082;
+  M1 = (m1 * 0.001) / M1;
+  M2 = (m2 * 0.001) / M2;
+  T = T + 273.15;
+  var R = 0.082;
 
-	return (M1 + M2) * R * T / V * 1000;
+  return (((M1 + M2) * R * T) / V) * 1000;
 }
 
 /*
@@ -443,8 +443,8 @@ Examples:
 */
 
 function opposite(number) {
-	//your code here
-	return -number;
+  //your code here
+  return -number;
 }
 
 /*
@@ -466,16 +466,16 @@ Feel the burn!!
 */
 
 function chuckPushUps(s) {
-	if (!s || typeof s != 'string') return 'FAIL!!';
-	if (!s.includes('0') && !s.includes('1')) return 'CHUCK SMASH!!';
-	r = s
-		.split('')
-		.filter((e) => e == '0' || e == '1' || e == ' ')
-		.join('')
-		.split(' ')
-		.map((e) => parseInt(e, 2))
-		.filter((e) => !isNaN(e));
-	return Math.max(...r);
+  if (!s || typeof s != "string") return "FAIL!!";
+  if (!s.includes("0") && !s.includes("1")) return "CHUCK SMASH!!";
+  r = s
+    .split("")
+    .filter((e) => e == "0" || e == "1" || e == " ")
+    .join("")
+    .split(" ")
+    .map((e) => parseInt(e, 2))
+    .filter((e) => !isNaN(e));
+  return Math.max(...r);
 }
 
 /*
@@ -493,9 +493,9 @@ makeNegative(0.12); // return -0.12
   */
 
 function makeNegative(num) {
-	// Code?
-	if (num < 0) return num;
-	return -num;
+  // Code?
+  if (num < 0) return num;
+  return -num;
 }
 
 /*
@@ -512,14 +512,14 @@ Input: 123456789 Output: 987654321
   */
 
 function descendingOrder(n) {
-	//...
-	let str = n.toString().split('');
-	let a = str
-		.sort((a, b) => {
-			return b - a;
-		})
-		.join('');
-	return parseInt(a);
+  //...
+  let str = n.toString().split("");
+  let a = str
+    .sort((a, b) => {
+      return b - a;
+    })
+    .join("");
+  return parseInt(a);
 }
 
 /* CODING CHALLANGE 23
@@ -533,16 +533,22 @@ The input string will only consist of lower case letters and/or spaces.
   */
 
 function getCount(str) {
-	var vowelsCount = 0;
+  var vowelsCount = 0;
 
-	// enter your majic here
-	let a = str.split('');
-	for (let vowel of a) {
-		if (vowel === 'a' || vowel === 'e' || vowel === 'i' || vowel === 'o' || vowel === 'u') {
-			vowelsCount++;
-		}
-	}
-	return vowelsCount;
+  // enter your majic here
+  let a = str.split("");
+  for (let vowel of a) {
+    if (
+      vowel === "a" ||
+      vowel === "e" ||
+      vowel === "i" ||
+      vowel === "o" ||
+      vowel === "u"
+    ) {
+      vowelsCount++;
+    }
+  }
+  return vowelsCount;
 }
 
 /* CODING CHALLANGE 24
@@ -556,7 +562,7 @@ reverseWords("The greatest victory is that which requires no battle")
   */
 
 function reverseWords(str) {
-	return str.split(' ').reverse().join(' '); // reverse those words
+  return str.split(" ").reverse().join(" "); // reverse those words
 }
 
 /* CODING CHALLANGE 25
@@ -576,27 +582,27 @@ GetSum(-1, 2) == 2  // -1 + 0 + 1 + 2 = 2
   */
 
 function getSum(a, b) {
-	let arr = [];
+  let arr = [];
 
-	if (a < b) {
-		for (let start = a; start <= b; start++) {
-			arr.push(start);
-		}
-		//     console.log('pos', arr)
-	}
+  if (a < b) {
+    for (let start = a; start <= b; start++) {
+      arr.push(start);
+    }
+    //     console.log('pos', arr)
+  }
 
-	if (a > b) {
-		for (let start = a; start >= b; start--) {
-			arr.push(start);
-		}
-		//     console.log('neg', arr)
-	}
-	if (arr.length === 0) {
-		return a;
-	} else {
-		let sum = arr.reduce((acc, cur) => acc + cur);
-		return sum;
-	}
+  if (a > b) {
+    for (let start = a; start >= b; start--) {
+      arr.push(start);
+    }
+    //     console.log('neg', arr)
+  }
+  if (arr.length === 0) {
+    return a;
+  } else {
+    let sum = arr.reduce((acc, cur) => acc + cur);
+    return sum;
+  }
 }
 
 /*
@@ -615,22 +621,22 @@ Note: for this kata y isn't considered a vowel.
  */
 
 function disemvowel(str) {
-	let res = [];
-	let a = str.split('');
-	a.forEach((char) => {
-		if (
-			char.toLowerCase() === 'a' ||
-			char.toLowerCase() === 'e' ||
-			char.toLowerCase() === 'i' ||
-			char.toLowerCase() === 'o' ||
-			char.toLowerCase() === 'u'
-		) {
-			return;
-		} else {
-			res.push(char);
-		}
-	});
-	return res.join('');
+  let res = [];
+  let a = str.split("");
+  a.forEach((char) => {
+    if (
+      char.toLowerCase() === "a" ||
+      char.toLowerCase() === "e" ||
+      char.toLowerCase() === "i" ||
+      char.toLowerCase() === "o" ||
+      char.toLowerCase() === "u"
+    ) {
+      return;
+    } else {
+      res.push(char);
+    }
+  });
+  return res.join("");
 }
 
 /*
@@ -653,13 +659,13 @@ The middle character(s) of the word represented as a string.
   */
 
 function getMiddle(s) {
-	let l = s.length;
-	console.log(l / 2, l / 2 + 1);
-	if (l % 2 === 0) {
-		return s.slice(l / 2 - 1, s.length / 2 + 1);
-	} else {
-		return s.slice(s.length / 2, s.length / 2 + 1);
-	}
+  let l = s.length;
+  console.log(l / 2, l / 2 + 1);
+  if (l % 2 === 0) {
+    return s.slice(l / 2 - 1, s.length / 2 + 1);
+  } else {
+    return s.slice(s.length / 2, s.length / 2 + 1);
+  }
 }
 
 /*
@@ -672,16 +678,16 @@ Note: The function accepts an integer and returns an integer
    */
 
 function squareDigits(num) {
-	//may the code be with you
-	let a = [ ...num.toString() ];
-	let arr = [];
-	for (let n of a) {
-		let transformNum = parseInt(n);
-		let squer = transformNum * transformNum;
-		arr.push(squer);
-	}
+  //may the code be with you
+  let a = [...num.toString()];
+  let arr = [];
+  for (let n of a) {
+    let transformNum = parseInt(n);
+    let squer = transformNum * transformNum;
+    arr.push(squer);
+  }
 
-	return parseInt(arr.join(''));
+  return parseInt(arr.join(""));
 }
 /*
 CODING CHALLANGE 29
@@ -707,52 +713,52 @@ There should be no trailing whitespace
 */
 
 function to_nato(words) {
-	let transformUpperCaseAndArray = [ ...words.toUpperCase() ];
-	let d = {
-		'': ' ',
-		A: 'Alfa',
-		B: 'Bravo',
-		C: 'Charlie',
-		D: 'Delta',
-		E: 'Echo',
-		F: 'Foxtrot',
-		G: 'Golf',
-		H: 'Hotel',
-		I: 'India',
-		J: 'Juliett',
-		K: 'Kilo',
-		L: 'Lima',
-		M: 'Mike',
-		N: 'November',
-		O: 'Oscar',
-		P: 'Papa',
-		Q: 'Quebec',
-		R: 'Romeo',
-		S: 'Sierra',
-		T: 'Tango',
-		U: 'Uniform',
-		V: 'Victor',
-		W: 'Whiskey',
-		X: 'Xray',
-		Y: 'Yankee',
-		Z: 'Zulu',
-		'!': '!',
-		'?': '?',
-		'.': '.',
-		'-': ''
-	};
-	let a = transformUpperCaseAndArray.map((x) => d[x]).join('/');
-	let arr = [];
-	a.split('/').forEach((char) => {
-		if (char !== '') {
-			arr.push(char);
-		} else {
-			return;
-		}
-	});
+  let transformUpperCaseAndArray = [...words.toUpperCase()];
+  let d = {
+    "": " ",
+    A: "Alfa",
+    B: "Bravo",
+    C: "Charlie",
+    D: "Delta",
+    E: "Echo",
+    F: "Foxtrot",
+    G: "Golf",
+    H: "Hotel",
+    I: "India",
+    J: "Juliett",
+    K: "Kilo",
+    L: "Lima",
+    M: "Mike",
+    N: "November",
+    O: "Oscar",
+    P: "Papa",
+    Q: "Quebec",
+    R: "Romeo",
+    S: "Sierra",
+    T: "Tango",
+    U: "Uniform",
+    V: "Victor",
+    W: "Whiskey",
+    X: "Xray",
+    Y: "Yankee",
+    Z: "Zulu",
+    "!": "!",
+    "?": "?",
+    ".": ".",
+    "-": "",
+  };
+  let a = transformUpperCaseAndArray.map((x) => d[x]).join("/");
+  let arr = [];
+  a.split("/").forEach((char) => {
+    if (char !== "") {
+      arr.push(char);
+    } else {
+      return;
+    }
+  });
 
-	let final = arr.join(' ');
-	return final;
+  let final = arr.join(" ");
+  return final;
 }
 
 /*
@@ -778,11 +784,10 @@ Examples
 26  =>  false
 */
 
-var isSquare = function(n) {
-	if (n === 0) return true;
-	return n > 0 && Math.sqrt(n) % 1 === 0;
+var isSquare = function (n) {
+  if (n === 0) return true;
+  return n > 0 && Math.sqrt(n) % 1 === 0;
 };
-
 
 /*
 CODING CHALLANGE 31
@@ -796,18 +801,17 @@ Examples:
 
 */
 
-function sumCubes(n){
-    let sum = [];
-   for(let i=1; i<=n; i++){
-     let a = i**3
-  //    console.log(a)
-     sum.push(a)
-   }
-    return sum.reduce((acc, cur) => acc+cur)
+function sumCubes(n) {
+  let sum = [];
+  for (let i = 1; i <= n; i++) {
+    let a = i ** 3;
+    //    console.log(a)
+    sum.push(a);
   }
+  return sum.reduce((acc, cur) => acc + cur);
+}
 
-
-  /*
+/*
   CODING CHALLANGE 31
   Highest and Lowest
   In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
@@ -819,22 +823,20 @@ highAndLow("1 2 -3 4 5"); // return "5 -3"
 highAndLow("1 9 3 4 -5"); // return "9 -5"
   */
 
-function highAndLow(numbers){
-    const arr = numbers.split(' ')
-    const a = []
-    for (let num of arr){
-    a.push(parseInt(num))
-
-    }
-
-    let min = Math.min(...a).toString()
-    let max = Math.max(...a).toString()
-
-    return max +" " + min
+function highAndLow(numbers) {
+  const arr = numbers.split(" ");
+  const a = [];
+  for (let num of arr) {
+    a.push(parseInt(num));
   }
 
+  let min = Math.min(...a).toString();
+  let max = Math.max(...a).toString();
 
-  /*
+  return max + " " + min;
+}
+
+/*
    CODING CHALLANGE 32
 This time no story, no theory. The examples below show you how to write function accum:
 
@@ -845,21 +847,18 @@ accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
 accum("cwAt") -> "C-Ww-Aaa-Tttt"
   */
 
-   function accum(s) {
-	// your code
-  let str = s.split('')
-  let arr = []
+function accum(s) {
+  // your code
+  let str = s.split("");
+  let arr = [];
   str.forEach((letter, index) => {
+    let a = letter.repeat(index + 1);
+    let b = a.charAt(0).toUpperCase() + a.slice(1).toLowerCase();
 
-  let a = letter.repeat(index+1);
-    let b = a.charAt(0).toUpperCase() + a.slice(1).toLowerCase()
+    arr.push(b);
+  });
 
-  arr.push(b)
-
-  })
-
-
-return arr.join('-')
+  return arr.join("-");
 }
 
 /*
@@ -872,17 +871,17 @@ String will never be empty and you do not need to account for different data typ
 
 */
 
-function findShort(s){
-    let arrStr = s.split(' ')
-    let lengtharr = []
-    arrStr.forEach(word => {
-      let lengthWord = word.length;
-   lengtharr.push(lengthWord)
-                           })
-    return Math.min.apply(Math, lengtharr)
-  }
+function findShort(s) {
+  let arrStr = s.split(" ");
+  let lengtharr = [];
+  arrStr.forEach((word) => {
+    let lengthWord = word.length;
+    lengtharr.push(lengthWord);
+  });
+  return Math.min.apply(Math, lengtharr);
+}
 
-  /*
+/*
    CODING CHALLANGE 34
 Exes and Ohs
 Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
@@ -897,23 +896,22 @@ XO("zzoo") => false
   */
 
 function XO(str) {
-    //code here
-  let arr = str.toLowerCase().split('')
+  //code here
+  let arr = str.toLowerCase().split("");
   let x = 0;
   let o = 0;
-  arr.forEach(c => {
-
-    if(c === 'x'){
-      x++
-    } else if(c === 'o'){
-    o++
+  arr.forEach((c) => {
+    if (c === "x") {
+      x++;
+    } else if (c === "o") {
+      o++;
     }
-  })
+  });
 
-  if(x === o){
-    return true
+  if (x === o) {
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 
@@ -931,11 +929,10 @@ Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 */
 
 String.prototype.toJadenCase = function () {
-    let arrStr = this.split(' ');
-    let cap = arrStr.map( a => a.charAt(0).toUpperCase() + a.substr(1) );
-    return cap.join(' ')
-    };
-
+  let arrStr = this.split(" ");
+  let cap = arrStr.map((a) => a.charAt(0).toUpperCase() + a.substr(1));
+  return cap.join(" ");
+};
 
 /*
 CODING CHALLANGE 36
@@ -953,27 +950,26 @@ DNAStrand ("ATTGC") // return "TAACG"
 DNAStrand ("GTAT") // return "CATA"
 */
 
-function DNAStrand(dna){
-    let a = "A";
-    let t = 'T';
-    let c = 'C';
-    let g = 'G';
-    let result = []
-    const split = dna.split('')
-   split.forEach(letter => {
-      if(letter === a){
-        result.push(t)
-      } else if(letter === t) {
-        result.push(a)
-      } else if( letter === c){
-       result.push(g)
-      } else if(letter === g){
-        result.push(c)
-      }
-    })
-    return result.join('')
-  }
-
+function DNAStrand(dna) {
+  let a = "A";
+  let t = "T";
+  let c = "C";
+  let g = "G";
+  let result = [];
+  const split = dna.split("");
+  split.forEach((letter) => {
+    if (letter === a) {
+      result.push(t);
+    } else if (letter === t) {
+      result.push(a);
+    } else if (letter === c) {
+      result.push(g);
+    } else if (letter === g) {
+      result.push(c);
+    }
+  });
+  return result.join("");
+}
 
 /*
 CODING CHALLANGE 37
@@ -987,14 +983,70 @@ filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
 
 function filter_list(l) {
-    // Return a new array with the strings filtered out
-   const result = []
-   l.filter(ent => {
-     if(typeof ent === 'string'){
-       return
-     } else {
-       result.push(ent)
-     }
-   })
-    return result;
+  // Return a new array with the strings filtered out
+  const result = [];
+  l.filter((ent) => {
+    if (typeof ent === "string") {
+      return;
+    } else {
+      result.push(ent);
+    }
+  });
+  return result;
+}
+
+/* 
+  CODING CHALLANGE 38
+ Count salutes 
+ Description
+There is a narrow hallway in which people can go right and left only. When two people meet in the hallway, by tradition they must salute each other. People move at the same speed left and right.
+
+Your task is to write a function that, given a string representation of people moving in the hallway, will count the number of salutes that will occur.
+Note: 2 salutes occur when people meet, one to the other and vice versa.
+
+Input
+People moving right will be represented by >; people moving left will be represented by <. An example input would be >--<--->->. The - character represents empty space, which you need not worry about.
+
+Examples
+Input: >----->-----<--<
+Output: 8
+
+Explanation: Both guys moving right will meet both guys moving left.
+Hence a total of 4 meetings will occur and 8 salutes will occur.
+
+Input: <---<--->----<
+Output: 2
+
+Explanation: Only one meeting occurs.
+  */
+
+function countSalutes(hallway) {
+  let right = 0;
+  let salutes = 0;
+  for (let p of [...hallway]) {
+    if (p === ">") right += 1;
+    else if (p === "<") salutes += 2 * right;
   }
+  //   console.log(right, salutes)
+  return salutes;
+}
+
+/* 
+CODING CHALLANGE 39
+
+Isograms
+An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+isIsogram("Dermatoglyphics") == true
+isIsogram("aba") == false
+isIsogram("moOse") == false // -- ignore letter case
+*/
+
+
+function isIsogram(str){
+let notUpper = str.toLowerCase()
+const intersection = notUpper.split("").every((c, i) => notUpper.indexOf(c) == i);
+
+return intersection
+
+}
