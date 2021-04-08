@@ -995,9 +995,9 @@ function filter_list(l) {
   return result;
 }
 
-/* 
+/*
   CODING CHALLANGE 38
- Count salutes 
+ Count salutes
  Description
 There is a narrow hallway in which people can go right and left only. When two people meet in the hallway, by tradition they must salute each other. People move at the same speed left and right.
 
@@ -1031,7 +1031,7 @@ function countSalutes(hallway) {
   return salutes;
 }
 
-/* 
+/*
 CODING CHALLANGE 39
 
 Isograms
@@ -1050,3 +1050,68 @@ const intersection = notUpper.split("").every((c, i) => notUpper.indexOf(c) == i
 return intersection
 
 }
+
+/* CODING CHALLANGE 40
+Sum of two lowest positive integers
+Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+
+For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+
+[10, 343445353, 3453445, 3453545353453] should return 3453455.
+*/
+
+function sumTwoSmallestNumbers(numbers) {
+    //Code here
+  const res = numbers.sort((a,b) => a - b).slice(0, 2);
+   return res.reduce((acc, curr) => acc+curr, 0)
+  }
+
+
+  /* CODING CHALLANGE 41
+Paul is an excellent coder and sits high on the CW leaderboard. He solves kata like a banshee but would also like to lead a normal life, with other activities. But he just can't stop solving all the kata!!
+
+Given an array (x) you need to calculate the Paul Misery Score. The values are worth the following points:
+
+kata = 5
+Petes kata = 10
+life = 0
+eating = 1
+The Misery Score is the total points gained from the array. Once you have the total, return as follows:
+
+< 40 = 'Super happy!'
+< 70 >= 40 = 'Happy!'
+< 100 >= 70 = 'Sad!'
+> 100 = 'Miserable!'
+*/
+
+function paul(x){
+    let kata = 5;
+    let PetesKata = 10;
+    let life = 0;
+    let eating = 1;
+
+    let count = 0;
+
+    x.forEach(activitie => {
+      if(activitie === 'life'){
+        count +=life;
+      } else if(activitie === 'eating'){
+        count +=eating;
+      }else if(activitie === 'Petes kata'){
+        count +=PetesKata
+      } else if(activitie === 'kata'){
+         count +=kata
+      }
+    })
+      if(count < 40){
+        return 'Super happy!'
+      } else if(count < 70){
+        return 'Happy!'
+      }else if(count < 100){
+        return 'Sad!'
+      } else if(count == undefined){
+        return 'Miserable!'
+      } else {
+        return 'Miserable!'
+      }
+    }
